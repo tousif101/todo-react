@@ -12,18 +12,14 @@ function App() {
     <UserProvider>
       <TodoProvider>
       <BrowserRouter>
-        <div className='flex flex-col justify-between h-screen'>
         {/* <NavBar /> Add Navbar and Footer Later */}
-        <main className='container mx-auto px-3 pb-12'>
           <Routes>
               <Route exact path='/' element={<Home />} />
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<Login />} />
               <Route path='/todo' element={<Todo />} />
           </Routes>
-          </main>
           {/* <Footer />  */}
-        </div>
         </BrowserRouter>
         </TodoProvider>
       </UserProvider>

@@ -12,9 +12,6 @@ export const TodoProvider = ({children}) => {
     }
     const [state,dispatch] = useReducer(todoReducr,initialState)
 
-    //Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYWVhM2Q3YzhlMmU0OTFlZGE1ODkzNyIsIm5hbWUiOiJ0YWNhdHRhYyIsInV1aWQiOiJmZDZjN2MwZi0yOWM3LTRjMzAtYTZlMy1lMDNmMGM0ODZhODkiLCJpYXQiOjE2NTYxMTUwNDUsImV4cCI6MTY4NzY3MTk3MX0.FzWdF_0GWeKBL3rzEJRickCSfCHOFqv9fwLCxvKQWnw
-    //TODO: Bearer token in Session next please.
-    //TODO: Save Todo into the backend!
     const config = {
         headers: { Authorization: `${localStorage.getItem('token')}`}
     };
@@ -86,9 +83,6 @@ export const TodoProvider = ({children}) => {
             });
             //add the todos to state 
     }
-
-
-
 
     return (
         <TodoContext.Provider

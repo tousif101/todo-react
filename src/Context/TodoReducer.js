@@ -1,6 +1,5 @@
 const todoReducr = (state, action) => {
     switch (action.type){
-        //Make one for marking todo as done.
         case 'CREATE_TODO':
             return {
                 ...state,
@@ -20,7 +19,6 @@ const todoReducr = (state, action) => {
             return{
                 ...state,
                 todos: state.todos.map((todo) => todo._id === action.payload.id ? { ...todo, ...action.payload.updatedTodo } : todo)
-                //  feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item))
             }
     
         default:

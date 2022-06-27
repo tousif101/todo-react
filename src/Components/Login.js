@@ -29,25 +29,24 @@ function Login() {
     }
     return (
 
-    
-        <div className='grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb=8 gap-8'>
+        <div className="container flex justify-center"> 
             {isLoggedIn && (
             <Navigate to="/todo" replace={true} />
           )}
-            <div>
+            <div content-center >
                 <form onSubmit={handleSubmit}>
                     <div className='form-control'>
                         <div className='relative'>
     
                             <input 
                                 type='text'
-                                className='w-full pr-40 bg-gray-200 input input-lg text-black'
+                                className='w-full pr-40 bg-gray-200 input input-md text-black'
                                 placeholder='Email'
                                 onChange={handleEmailChange}
                             />
                             <input 
                                 type='text'
-                                className='w-full pr-40 bg-gray-200 input input-lg text-black'
+                                className='w-full pr-40 bg-gray-200 input input-md text-black'
                                 placeholder='Password'
                                 onChange={passwordChange}
                             />
@@ -62,6 +61,8 @@ function Login() {
              
                 </form>
             </div>
+    
+
         </div>
     )
 
