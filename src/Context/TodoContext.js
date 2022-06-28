@@ -19,7 +19,7 @@ export const TodoProvider = ({children}) => {
         console.log(config)
         console.log(todo)
         axios.post( 
-            'http://localhost:3500/api/todo',
+            'https://intense-plateau-64203.herokuapp.com/api/todo',
             todo,
             config
             ).then(function (response) {
@@ -37,7 +37,7 @@ export const TodoProvider = ({children}) => {
 
     const getTodo = () => {
         axios.get( 
-            'http://localhost:3500/api/todo',
+            'https://intense-plateau-64203.herokuapp.com/api/todo',
             config
             ).then(function (response) {
                 console.log(response.data)
@@ -53,7 +53,7 @@ export const TodoProvider = ({children}) => {
 
     const removeTodo = (id) => {
         axios.delete( 
-            `http://localhost:3500/api/todo/${id}`,
+            `https://intense-plateau-64203.herokuapp.com/api/todo/${id}`,
             config
             ).then(function (response) {
                 console.log(response.data)
@@ -69,7 +69,7 @@ export const TodoProvider = ({children}) => {
 
     const editTodo = (id,updatedTodo) => {
         axios.put( 
-            `http://localhost:3500/api/todo/${id}`,
+            `https://intense-plateau-64203.herokuapp.com/api/todo/${id}`,
             updatedTodo,
             config
             ).then(function (response) {

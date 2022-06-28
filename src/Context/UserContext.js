@@ -24,7 +24,7 @@ export const UserProvider = ({children}) => {
         //Boolean logged in?! 
 
         //TODO: Get host from config files
-        axios.post(`http://localhost:3500/api/users/register`, {
+        axios.post(`https://intense-plateau-64203.herokuapp.com/api/users/register`, {
             name: user.username,
             email: user.email,
             password: user.password,
@@ -47,7 +47,7 @@ export const UserProvider = ({children}) => {
     const loginUser = (user) => {
         //TODO: Get host from config files
         //Might also want to return the user in the login
-        axios.post(`http://localhost:3500/api/users/login`, {
+        axios.post(`https://intense-plateau-64203.herokuapp.com/api/users/login`, {
             email: user.email,
             password: user.password
           })
